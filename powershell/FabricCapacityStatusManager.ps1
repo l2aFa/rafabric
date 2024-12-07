@@ -21,7 +21,7 @@ param (
     [String]$CapacityName = "Fabric capacity name",
 
     [Parameter(Mandatory= $true)]
-    [String]$ApiVersion = "Current value is 2022-07-01-preview"
+    [String]$ApiVersion = "Current value is 2023-11-01"
 )
 
 # Azure login
@@ -86,6 +86,7 @@ do {
             throw "Unable to access the capacity after three retries. Failed to perform any action."
         }
         else {
+            Write-Error -Message $_.Exception
             Write-Output "*WARNING*: No action could be taken on the capacity ${CapacityName}, retrying again in 30 seconds..."
             Start-Sleep -Seconds 30
             $RetryCount = $RetryCount + 1
