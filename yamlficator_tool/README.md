@@ -18,12 +18,12 @@ Hope you find it useful 😃
 * Include the [yamlficator](https://github.com/l2aFa/rafabric/blob/main/yamlficator_tool/yamlficator.py) file inside your project.
 * Install the PyYAML required library (the use of a virtual environment is recommended): `pip install pyyaml` <br>
 This is the only non-standard library used by the tool, the rest should be available as Python built-ins.
-* Include the [sample_yamlficator_usage](https://github.com/l2aFarafabric/blob/main/yamlficator_tool/sample_yamlficator_usage.py) file inside your project or rename it/create your own following its example.
+* Include the [sample_yamlficator_usage](https://github.com/l2aFa/rafabric/blob/main/yamlficator_tool/sample_yamlficator_usage.py) file inside your project or rename it/create your own following its example.
 * Configure the repository directory path, desired item types and exclusion paths (if needed). This should be aligned with your replacement strategy defined within the parameter.yml file.
 
 
 ## 2️⃣ Contents:
-* [sample_yamlficator_usage.py](https://github.com/l2aFarafabric/blob/main/yamlficator_tool/sample_yamlficator_usage.py): Example of using the tool from a separate file. Includes path validation checks and logging. </br>It can be invoked directly from the terminal once included in the project (make sure you are at the correct path): `python sample_yamlficator_usage.py`
+* [sample_yamlficator_usage.py](https://github.com/l2aFa/rafabric/blob/main/yamlficator_tool/sample_yamlficator_usage.py): Example of using the tool from a separate file. Includes path validation checks and logging. </br>It can be invoked directly from the terminal once included in the project (make sure you are at the correct path): `python sample_yamlficator_usage.py`
 * [yamlficator.py](https://github.com/l2aFa/rafabric/blob/main/yamlficator_tool/yamlficator.py): Module content. Includes the classes, logging configuration and functions that conform the validation process, which can be adjusted as needed. For the moment, everything is in the same file for simplicity reasons.
 
 ---
