@@ -4,6 +4,10 @@
 
 Validation tool for CICD deployments within Microsoft Fabric using the [fabric-cicd library](https://microsoft.github.io/fabric-cicd/latest/).
 
+You can read more about it on Medium:
+* [English version](https://medium.com/@baggirraf/searching-for-a-needle-in-a-haystack-facilitating-deployments-with-fabric-cicd-c591fec3e478)
+* [Spanish version](https://medium.com/@baggirraf/buscando-la-aguja-en-el-pajar-facilitando-despliegues-con-fabric-cicd-fa967f1d0fce)
+
 This is not a replacement for the existing library; it is a complement when validating the content of the parameterization file and locating existing elements in the project that are not included in it. It does not deploy any content.
 
 yamlficator can be used in conjunction with [the existing validator](https://github.com/microsoft/fabric-cicd/blob/main/devtools/debug_parameterization.py) or independently.
@@ -33,7 +37,7 @@ This is the only non-standard library used by the tool, the rest should be avail
     * Console logging is configured at the `DEBUG` level and color-coded.
     * File logging is configured at the `INFO` level.
 * `file_path` invalid entries are reported as errors, you should fix them before trying the deployment.
-    * The process excludes and ignores relative paths using wildcard patterns (*) inside the file_path attribute.
+    * The process excludes and ignores paths using wildcard patterns (*) inside the `file_path` attribute.
     * These paths, if correct, should be defined as exclusion path. You can also check them with the [official validation tool](https://github.com/microsoft/fabric-cicd/blob/main/devtools/debug_parameterization.py).
 * `item_name` invalid entries are reported as warnings, it is recommended to fix them because, although they will not cause the deployment to fail, they may cause errors later once they are executed.
 * Project artifacts not found in the parameter.yml are reported as warnings as well. This is not an issue as such, but it should be reviewed to see if any of them (or their path) need to be included in the process. If they are false positives, it is recommended to configure them as excluded paths.
